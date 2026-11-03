@@ -5,8 +5,10 @@ A web application that allows users to upload and merge PDF files into a single 
 ## Features
 
 - Upload PDF files through a web interface.
-- Merge multiple PDF files into one document.
+- Merge up to two PDF files into one document.
 - Download the merged PDF.
+- Store uploaded PDF files in the `uploads/` folder.
+- Store the merged PDF in the `public/` folder.
 - Simple and user-friendly interface.
 
 ## Technologies Used
@@ -24,12 +26,21 @@ A web application that allows users to upload and merge PDF files into a single 
 ```text
 PDF-FX-Merger/
 │
+├── public/
+│   └── .gitkeep
+│
 ├── templates/
+│   └── index.html
+│
+├── uploads/
+│   └── .gitkeep
+│
 ├── merge.js
 ├── server.js
 ├── package.json
 ├── package-lock.json
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 ## Installation and Setup
@@ -55,7 +66,7 @@ npm install
 4. Start the server:
 
 ```bash
-node server.js
+npm start
 ```
 
 5. Open your browser and visit:
@@ -64,9 +75,18 @@ node server.js
 http://localhost:3000
 ```
 
+## How It Works
+
+1. Open the application in your browser.
+2. Select two PDF files.
+3. Click the merge button.
+4. The application uploads the selected files to the server.
+5. The backend merges the PDFs into one document.
+6. Download the resulting PDF.
+
 ## Purpose
 
-This project was developed to practice JavaScript, Node.js, Express.js, file uploads, and backend development.
+This project was developed to practice JavaScript, Node.js, Express.js, file uploads, asynchronous operations, and backend development.
 
 ---
 
